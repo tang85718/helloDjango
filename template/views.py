@@ -7,7 +7,7 @@ def home(request):
     return render(request, 'home.html')
 
 
-def mytest1(request):
+def example_for_args(request):
     arg = u"I am myTest1..."
     return render(request, 'example1.html', {'arg': arg})
 
