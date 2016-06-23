@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from home import views as home_view
+from calc import views as calc_view
 
 urlpatterns = [
+    url(r'^$', home_view.home),
+    url(r'^calc/', calc_view.add, name='add'),
+    url(r'^calc_grace/(\d+)/(\d+)/$', calc_view.add_for_grace, name='add_for_grace'),
     url(r'^admin/', admin.site.urls),
 ]
