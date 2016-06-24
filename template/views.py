@@ -1,4 +1,4 @@
-# coding : utf-8
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 
 
@@ -15,3 +15,13 @@ def example_for_args(request):
 def example_for_loop(request):
     list = ['HTML', "CSS", "jQuery", "python", "Django"]
     return render(request, 'example2.html', {'list': list})
+
+
+def example_for_dict(request):
+    info_dict = {'site': '自强学院', 'content': '爬虫技术教程'}
+    return render(request, 'example3.html', {"info_dict": info_dict})
+
+
+def example_for_loop_2(request):
+    list = map(str, range(100))
+    return render(request, 'example4.html', {'list': list})

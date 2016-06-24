@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example4</title>
+</head>
+<body>
+{% for item in list %}
+    {{ item }}{% if not forloop.last %},{% endif %}
+{% empty %}
+    list is empty
+{% endfor %}
+<br>
+{% url 'add_for_grace' 618 382 %} <br>
+{% url 'add_for_grace' 618 382 as the_line %} <br>
+<a href="{{ the_line }}">link: {{ the_line }}</a>
+
+</body>
+</html>
