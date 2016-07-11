@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^calc/', calc_view.add, name='add'),
     url(r'^calc_grace/(\d+)/(\d+)/$', calc_view.add_for_grace, name='add_for_grace'),
     url(r'^template/', include('template.urls')),
+    url(r'^push/', include('push.urls')),
     url(r'^admin/', admin.site.urls),
 ]

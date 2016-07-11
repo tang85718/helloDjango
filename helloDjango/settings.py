@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'home',
     'calc',
     'template',
-    'blog'
+    'blog',
+    'push'
 ]
 
 MIDDLEWARE_CLASSES = [
