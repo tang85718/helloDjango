@@ -13,8 +13,8 @@ def example1(request):
         if form.is_valid():
             title = form.cleaned_data['title']
             messages.add_message(request, messages.INFO, title)
-            return render(request, 'push1.html', {'form': form})
+            return render(request, 'push/push1.html', {'form': form})
     else:
         form = MessageForm()
 
-    return render(request, 'push1.html', {'form': form})
+    return render(request, 'push/push1.html', {'form': form})
