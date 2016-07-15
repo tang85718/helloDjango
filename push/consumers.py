@@ -17,8 +17,7 @@ def ws_connected(message):
 
 
 def ws_receive(message):
-    for i in range(10):
-        time.sleep(3)
+    for i in range(20):
         Group("chat").send({
             "text": "[user] %s " % i
         })

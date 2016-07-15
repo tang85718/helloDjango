@@ -2,11 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import MessageForm
+from django.views.decorators.cache import cache_page
 
 
 # Create your views here.
 
-
+@cache_page(5)
 def example1(request):
     if request.method == 'POST':
         form = MessageForm(request.POST)
